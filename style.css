@@ -1,183 +1,187 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 
 body{
 
-    font-family:'Inter', Arial, sans-serif;
+height:100vh;
 
-    background:
-    linear-gradient(135deg,#eef5ff,#ffffff);
+display:flex;
 
-    color:#1f2937;
+align-items:center;
+
+justify-content:center;
+
+background:#070b14;
+
+font-family:'Inter',sans-serif;
+
+color:white;
+
+overflow:hidden;
+
+}
+
+
+
+main{
+
+width:900px;
+
+text-align:center;
 
 }
 
 
-
-.container{
-
-    max-width:1100px;
-    margin:auto;
-
-}
-
-
-header{
-
-    background:
-    linear-gradient(135deg,#0078D4,#003B73);
-
-    color:white;
-
-    padding:70px 20px;
-
-    text-align:center;
-
-}
 
 
 .logo{
 
-    font-size:18px;
-    font-weight:700;
+font-size:13px;
 
-    letter-spacing:2px;
+letter-spacing:5px;
 
-    margin-bottom:30px;
+color:#38bdf8;
 
-}
-
-
-header h1{
-
-    font-size:48px;
-
-    margin-bottom:20px;
+margin-bottom:35px;
 
 }
 
 
-header p{
 
-    font-size:20px;
+h1{
 
-    opacity:.9;
+font-size:56px;
+
+line-height:1.15;
+
+font-weight:700;
+
+letter-spacing:-2px;
 
 }
+
+
+
+.subtitle{
+
+margin-top:25px;
+
+color:#94a3b8;
+
+font-size:17px;
+
+}
+
 
 
 .status{
 
-    display:inline-block;
+margin:35px auto;
 
-    margin-top:30px;
+display:flex;
 
-    padding:12px 25px;
+align-items:center;
 
-    background:rgba(255,255,255,.15);
+justify-content:center;
 
-    border-radius:30px;
+gap:10px;
 
-    font-weight:600;
+font-size:14px;
 
-}
-
-
-
-.hero{
-
-    padding:70px 20px;
+color:#22c55e;
 
 }
 
 
 
-.card{
+.status span{
 
-    max-width:900px;
+height:8px;
 
-    margin:auto;
+width:8px;
 
-    background:white;
+background:#22c55e;
 
-    padding:50px;
+border-radius:50%;
 
-    border-radius:20px;
-
-
-    box-shadow:
-
-    0 20px 50px rgba(0,0,0,.12);
-
-
-    text-align:center;
-
-
-    animation:fade 1s ease;
+box-shadow:0 0 15px #22c55e;
 
 }
 
 
 
-.card h2{
 
-    color:#0078D4;
+.flow{
 
-    font-size:36px;
+display:flex;
 
-    margin-bottom:20px;
+align-items:center;
 
-}
+justify-content:center;
 
-
-.card p{
-
-    line-height:1.8;
-
-    font-size:17px;
+margin:50px 0;
 
 }
 
 
 
-.features{
+.item{
 
-    display:flex;
-
-    gap:25px;
-
-    margin:40px 0;
-
-}
-
-
-.features div{
-
-    flex:1;
-
-    padding:25px;
-
-    border-radius:15px;
-
-
-    background:#f5f9ff;
-
-
-    border-left:5px solid #0078D4;
+width:130px;
 
 }
 
 
 
-.features h3{
+.item h3{
 
-    color:#0078D4;
+font-size:18px;
 
-    margin-bottom:10px;
+color:#38bdf8;
+
+margin-bottom:8px;
+
+}
+
+
+
+.item p{
+
+color:#64748b;
+
+font-size:14px;
+
+}
+
+
+
+.line{
+
+height:1px;
+
+width:70px;
+
+background:#334155;
+
+}
+
+
+
+
+
+.description{
+
+color:#94a3b8;
+
+max-width:550px;
+
+margin:auto;
+
+line-height:1.7;
 
 }
 
@@ -185,25 +189,23 @@ header p{
 
 button{
 
+margin-top:35px;
 
-    background:#0078D4;
+padding:13px 35px;
 
-    color:white;
+border-radius:30px;
 
-    border:none;
+border:1px solid #38bdf8;
 
-    padding:15px 35px;
+background:transparent;
 
-    font-size:16px;
+color:#38bdf8;
 
-    font-weight:600;
+font-weight:600;
 
-    border-radius:50px;
+cursor:pointer;
 
-    cursor:pointer;
-
-
-    transition:.3s;
+transition:.3s;
 
 }
 
@@ -211,10 +213,9 @@ button{
 
 button:hover{
 
+background:#38bdf8;
 
-    background:#005fa3;
-
-    transform:translateY(-3px);
+color:#020617;
 
 }
 
@@ -222,90 +223,10 @@ button:hover{
 
 #message{
 
-    margin-top:25px;
+margin-top:20px;
 
-    color:#008000;
+color:#22c55e;
 
-    font-weight:600;
-
-}
-
-
-
-footer{
-
-
-    background:#111827;
-
-    color:white;
-
-    text-align:center;
-
-    padding:30px 20px;
-
-
-}
-
-
-
-.copyright{
-
-    margin-top:10px;
-
-    opacity:.6;
-
-    font-size:14px;
-
-}
-
-
-
-
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(30px);
-
-    }
-
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-
-
-
-@media(max-width:768px){
-
-
-    header h1{
-
-        font-size:34px;
-
-    }
-
-
-    .features{
-
-        flex-direction:column;
-
-    }
-
-
-    .card{
-
-        padding:30px;
-
-    }
+font-size:14px;
 
 }

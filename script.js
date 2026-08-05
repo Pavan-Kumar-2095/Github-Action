@@ -1,6 +1,6 @@
-function showMessage(){
+function runPipeline(){
 
     document.getElementById("message").innerHTML =
-    "🚀 CI/CD Pipeline Ready: GitHub Push → Docker Build → Azure Deployment Successful!";
+    "Pipeline Successful: GitHub Push → Docker Build → ACR Image Push → ACI Deployment";
 
 }
