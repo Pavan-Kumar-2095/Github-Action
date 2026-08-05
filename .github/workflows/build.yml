@@ -47,7 +47,7 @@ jobs:
         ${{ secrets.ACR_NAME }}.azurecr.io/my-website:${{ github.sha }}
     
     - name: Deploy ACI
-      run: |
+      run: |    
         az container create \
           --resource-group ${{ secrets.RESOURCE_GROUP }} \
           --name ${{ secrets.ACI_NAME }} \
@@ -58,4 +58,6 @@ jobs:
           --dns-name-label my-website-demo \
           --ports 80 \
           --os-type Linux \
+          --cpu 1 \
+          --memory 1 \
           --restart-policy Always
