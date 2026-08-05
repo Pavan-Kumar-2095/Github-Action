@@ -46,16 +46,16 @@ jobs:
         docker push \
         ${{ secrets.ACR_NAME }}.azurecr.io/my-website:${{ github.sha }}
     
-    - name: Deploy to Azure Container Instance
+    - name: Deploy ACI
       run: |
-
         az container create \
-        --resource-group ${{ secrets.RESOURCE_GROUP }} \
-        --name ${{ secrets.ACI_NAME }} \
-        --image ${{ secrets.ACR_LOGIN_SERVER }}/my-website:${{ github.sha }} \
-        --registry-login-server ${{ secrets.ACR_LOGIN_SERVER }} \
-        --registry-username ${{ secrets.ACR_USERNAME }} \
-        --registry-password ${{ secrets.ACR_PASSWORD }} \
-        --dns-name-label my-website-demo \
-        --ports 80 \
-        --restart-policy Always
+          --resource-group ${{ secrets.RESOURCE_GROUP }} \
+          --name ${{ secrets.ACI_NAME }} \
+          --image ${{ secrets.ACR_LOGIN_SERVER }}/my-website:${{ github.sha }} \
+          --registry-login-server ${{ secrets.ACR_LOGIN_SERVER }} \
+          --registry-username ${{ secrets.ACR_USERNAME }} \
+          --registry-password ${{ secrets.ACR_PASSWORD }} \
+          --dns-name-label my-website-demo \
+          --ports 80 \
+          --os-type Linux \
+          --restart-policy Always
