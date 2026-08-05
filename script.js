@@ -1,4 +1,6 @@
-function showMessage() {
+function showMessage(){
+
     document.getElementById("message").innerHTML =
-        "🎉 This website can be automatically rebuilt and deployed after every Git push!";
+    "🚀 CI/CD Pipeline Ready: GitHub Push → Docker Build → Azure Deployment Successful!";
+
 }

@@ -3,32 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Azure CI/CD Demo</title>
+    <title>Azure CI/CD Project</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
 <header>
-    <h1>My Azure CI/CD Project</h1>
-    <p>Automatic Deployment using GitHub Actions & Azure Container Instances</p>
+    <div class="container">
+
+        <div class="logo">
+            Azure DevOps
+        </div>
+
+        <h1>My Azure CI/CD Project</h1>
+
+        <p>
+            Automated Deployment Pipeline using
+            GitHub Actions, Docker & Azure Container Instances
+        </p>
+
+        <div class="status">
+            ● Deployment Pipeline Active
+        </div>
+
+    </div>
 </header>
 
+
 <section class="hero">
-    <h2>Welcome 👋</h2>
-    <p>
-        Every time I push code to GitHub,
-        GitHub Actions automatically builds a Docker image
-        and deploys it to Azure Container Instance.
-    </p>
 
-    <button onclick="showMessage()">Learn More</button>
+    <div class="card">
 
-    <p id="message"></p>
+        <h2>Welcome 👋</h2>
+
+        <p>
+            This project demonstrates a complete modern DevOps workflow.
+            Every code push to GitHub automatically triggers a CI/CD pipeline,
+            builds a Docker image, and deploys the application to Azure.
+        </p>
+
+
+        <div class="features">
+
+            <div>
+                <h3>GitHub Actions</h3>
+                <p>Automated build and deployment workflow.</p>
+            </div>
+
+
+            <div>
+                <h3>Docker</h3>
+                <p>Containerized application environment.</p>
+            </div>
+
+
+            <div>
+                <h3>Azure</h3>
+                <p>Cloud hosting with scalable infrastructure.</p>
+            </div>
+
+        </div>
+
+
+        <button onclick="showMessage()">
+            View Deployment Info
+        </button>
+
+
+        <p id="message"></p>
+
+
+    </div>
+
 </section>
 
+
+
 <footer>
-    <p>Built with ❤️ using HTML, CSS, JavaScript, Docker & Azure</p>
+
+    <p>
+        Built with ❤️ using HTML • CSS • JavaScript • Docker • Azure
+    </p>
+
+    <p class="copyright">
+        © 2026 Azure CI/CD Demo Project
+    </p>
+
 </footer>
+
+
 
 <script src="script.js"></script>
 
