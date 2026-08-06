@@ -1,6 +1,11 @@
-function runPipeline(){
+document.addEventListener("DOMContentLoaded", () => {
 
-    document.getElementById("message").innerHTML =
-    "Pipeline Successful: GitHub Push → Docker Build → ACR Image Push → ACI Deployment";
+    console.log("CI/CD Demo Loaded");
 
-}
+    const badge = document.querySelector(".badge");
+
+    const now = new Date();
+
+    badge.innerHTML = `● Live Deployment • ${now.toLocaleDateString()}`;
+
+});
